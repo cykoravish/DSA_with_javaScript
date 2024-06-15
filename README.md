@@ -21,12 +21,13 @@ It helps us to know how much memory an algorithm will consume.
 O(n) is a way to describe how long an algorithm takes to run as the size of the input (n) grows.
 example: -
 
-(```javascript
+```javascript
 function printElements(arr) {
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i]);
     }
-} ```)
+} 
+```
 
 - In this example, if the array has 5 elements, it will take 5 steps; if it has 10 elements, it will take 10 steps.
 
@@ -35,11 +36,11 @@ function printElements(arr) {
 ### What is O(1) ?
 O(1) describes an algorithm that takes a constant amount of time to complete, regardless of the size of the input. This means that the execution time remains the same no matter how much the input size increases.
 example: - 
- javascript
+```javascript
 function getFirstElement(arr) {
     return arr[0];  // Accessing the first element
 } 
-
+```
 - In this example, accessing the first element of the array takes the same amount of time whether the array has 5 elements or 5 million elements.
 
 - O(1) means that the algorithm's runtime is constant and does not change with the size of the input.
@@ -47,7 +48,7 @@ function getFirstElement(arr) {
 ### What is O(n^2) ?
 O(n^2) describes an algorithm whose time complexity grows quadratically with the size of the input (n). It's less efficient than O(n) and O(1) for large inputs because the time required increases rapidly as the input size increases.
 example: - 
-
+```javascript
 function printPairs(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
@@ -55,7 +56,7 @@ function printPairs(arr) {
         }
     }
 } 
-
+```
 - In this example, if the array has 5 elements, the function will perform 5 * 5 = 25 operations. If the array has 10 elements, it will perform 10 * 10 = 100 operations.
 
 ### What is O(log n)?
