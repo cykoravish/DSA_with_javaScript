@@ -20,12 +20,13 @@ It helps us to know how much memory an algorithm will consume.
 ### What is O(n) ?
 O(n) is a way to describe how long an algorithm takes to run as the size of the input (n) grows.
 example: -
+
 ``` javascript
 function printElements(arr) {
     for (let i = 0; i < arr.length; i++) {
         console.log(arr[i]);
     }
-}```
+}
 
 - In this example, if the array has 5 elements, it will take 5 steps; if it has 10 elements, it will take 10 steps.
 
@@ -37,7 +38,7 @@ example: -
 ```javascript
 function getFirstElement(arr) {
     return arr[0];  // Accessing the first element
-}```
+}
 
 - In this example, accessing the first element of the array takes the same amount of time whether the array has 5 elements or 5 million elements.
 
@@ -53,7 +54,7 @@ function printPairs(arr) {
             console.log(arr[i], arr[j]);
         }
     }
-}```
+}
 
 - In this example, if the array has 5 elements, the function will perform 5 * 5 = 25 operations. If the array has 10 elements, it will perform 10 * 10 = 100 operations.
 
