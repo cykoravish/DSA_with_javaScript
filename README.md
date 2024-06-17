@@ -145,10 +145,25 @@ console.log(reverseStr); //olleh
 
 ```javascript
 //checking if the string is palindrome or not
-const checkPalindrome = (str) => str === str.split("").reverse().join("");
-console.log(checkPalindrome("level")); //true if it's palindrome or else false if it's not palindrome
+const checkStr = (str) => str === str.split("").reverse().join("");
+console.log(checkStr("level")); //true if it's palindrome or else false if it's not palindrome
 
 //checking if the number is palindrome or not
-const checkPalindrome = (str) => str === str.split("").reverse().join("");
-console.log(checkPalindrome("level"));//true if it's palindrome or else false if it's not palindrome
+const checkNum = (str) => str === str.split("").reverse().join("");
+console.log(checkNum("level")); //true if it's palindrome or else false if it's not palindrome
+```
+### Capitalize first letter of each word.
+
+```javascript
+let string = "raVish iS a gOod boy";
+
+const capitalize = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+console.log(capitalize(string));
 ```

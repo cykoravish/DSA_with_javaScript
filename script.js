@@ -11,5 +11,6 @@
 
 // findStudent(students, "baby");
 
-const checkPalindrome = (num) => num.toString() === num.toString().split("").reverse().join("");
-console.log(checkPalindrome(3553));
+//capitalize first letter ofeach wword
+
+
