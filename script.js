@@ -11,5 +11,5 @@
 
 // findStudent(students, "baby");
 
-const checkPalindrome = (str) => str === str.split("").reverse().join("");
-console.log(checkPalindrome("level"));
+const checkPalindrome = (num) => num.toString() === num.toString().split("").reverse().join("");
+console.log(checkPalindrome(3553));
