@@ -132,8 +132,18 @@ console.log(newArr);
 ```
 
 ### Reversing string
+
 ```javascript
 const str = "hello";
 const reverseStr = str.split("").reverse().join("");
 console.log(reverseStr); //olleh
+```
+
+- Palindromes: If the reverse string is equal to the original one then that word is a palindrome. For example - pop, level, noon, wow
+
+### checking if the stringis palindrome
+
+```javascript
+const checkPalindrome = (str) => str === str.split("").reverse().join("");
+console.log(checkPalindrome("level")); //true if it's palindrome and else false if it's not palindrome
 ```
