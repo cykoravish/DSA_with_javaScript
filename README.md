@@ -130,3 +130,10 @@ newArr.push("banana");
 // newArr.delete(1);
 console.log(newArr);
 ```
+
+### Reversing string
+```javascript
+const str = "hello";
+const reverseStr = str.split("").reverse().join("");
+console.log(reverseStr); //olleh
+```
