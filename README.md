@@ -167,3 +167,19 @@ const capitalize = (str) => {
 
 console.log(capitalize(string));
 ```
+**Problem -> Imagine you have a array of numbers and a target number. Your job is to find two numbers from that array and the sum of those two number must be equal to the target number. You also need to tell which index those two numbers are in the array.**
+**example - if the array of number is [2, 7, 11, 15] and the target number is 0, then the answer would be [0, 1] because 2 (at index 0) plus 7 (at index 1) equals to 9**
+
+```javascript
+function twoSum(arr, targetNo) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === targetNo) {
+        return [i, j];
+      }
+    }
+  }
+  return [];
+}
+console.log(twoSum([2, 4, 6, 8, 10], 10));
+```

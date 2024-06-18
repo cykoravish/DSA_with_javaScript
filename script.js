@@ -11,6 +11,4 @@
 
 // findStudent(students, "baby");
 
-//capitalize first letter ofeach wword
-
 
