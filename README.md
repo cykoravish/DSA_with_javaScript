@@ -183,3 +183,157 @@ function twoSum(arr, targetNo) {
 }
 console.log(twoSum([2, 4, 6, 8, 10], 10));
 ```
+### Linked List: 
+A linked list is a linear data structure where each element, called a node, contains a value and a reference (or link) to the next node in the sequence.
+
+- singly Linked List: A singly linked list is a data structure consisting of a sequence of elements, each containing a data value and a reference (or pointer) to the next element in the sequence. It allows for efficient insertion and deletion of elements but only provides unidirectional traversal from the head (the first element) to the tail (the last element).
+
+```javascript
+class Node {
+  constructor(value) {
+    this.head = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor(value) {
+    this.head = new Node(value);
+    this.tail = this.head;
+    this.length = 1;
+  }
+
+  push(value) {
+    let newNode = new Node(value);
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    }
+
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+  }
+
+  reverse() {
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+    let next = temp;
+    let prev = null;
+
+    for (let i = 0; i < this.length; i++) {
+      next = temp.next;
+      temp.next = prev;
+      prev = temp;
+      temp = next;
+    }
+
+    return this;
+  }
+}
+
+const myLinkedList = new LinkedList(1);
+myLinkedList.push(2);
+myLinkedList.push(3);
+myLinkedList.push(4);
+console.log(myLinkedList.reverse());
+```
+- Doubly Linked List: A doubly linked list is a data structure consisting of a sequence of elements, each containing a data value and two references (or pointers): one pointing to the next element in the sequence and the other pointing to the previous element. This bidirectional linkage allows traversal in both forward and backward directions, facilitating more efficient insertions and deletions compared to a singly linked list, especially when the operations involve elements near the end of the list.
+
+```javascript
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+    this.prev = null;
+  }
+}
+
+class DoublyLinkedList {
+  constructor(value) {
+    const newNode = new Node(value);
+    this.head = newNode;
+    this.tail = this.head;
+    this.length = 1;
+  }
+
+  push(value) {
+    const newNode = new Node(value);
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      newNode.prev = this.tail;
+      this.tail = newNode;
+    }
+
+    this.length++;
+    return this;
+  }
+
+  pop() {
+    if (this.length === 0) {
+      return undefined;
+    }
+
+    let temp = this.tail;
+
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.tail = this.tail.prev;
+      this.tail.next = null;
+      temp.prev = null;
+    }
+
+    this.length--;
+    return temp;
+  }
+
+  unshift(value) {
+    const newNode = new Node(value);
+
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+
+    this.length++;
+    return this;
+  }
+
+  shift() {
+    if (this.length === 0) {
+      return undefined;
+    }
+
+    let temp = this.head;
+
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.head = this.head.next;
+      this.head.prev = null;
+      temp.next = null;
+    }
+    this.length--;
+    return temp;
+  }
+}
+
+let myDoublyLinkedList = new DoublyLinkedList(0);
+myDoublyLinkedList.push(1);
+// myDoublyLinkedList.pop();
+// myDoublyLinkedList.shift();
+console.log(myDoublyLinkedList);
+```
