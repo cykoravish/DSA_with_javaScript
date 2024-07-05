@@ -394,5 +394,62 @@ theStack.push(1);
 theStack.push(2);
 // theStack.pop();
 console.log(theStack);
+```
 
+### Queue
+A Queue is a linear data structure that functions like a waiting line. It follows the FIFO (First In First Out) principle, meaning the element that enters the queue first will be the first one to be removed.
+
+```javascript
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor(value) {
+    const newNode = new Node(value);
+    this.first = newNode;
+    this.last = newNode;
+    this.length = 1;
+  }
+
+  enqueue(value) {
+    const newNode = new Node(value);
+    if (this.length === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    }
+
+    this.last.next = newNode;
+    this.last = newNode;
+    this.length++;
+    return this;
+  }
+
+  dequeue() {
+    if (this.length === 0) {
+      return undefined;
+    }
+
+    let temp = this.first;
+
+    if (this.length === 1) {
+      this.first = null;
+      this.last = null;
+    }
+
+    this.first = this.first.next;
+    temp.next = null;
+    this.length--;
+    return temp;
+  }
+}
+
+let myQueue = new Queue(0);
+myQueue.enqueue(1);
+myQueue.enqueue(2);
+myQueue.dequeue();
+console.log(myQueue);
 ```
