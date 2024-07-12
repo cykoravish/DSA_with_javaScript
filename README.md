@@ -4,7 +4,7 @@
 
 ## Data Structure
 
-A data structure is a specific way of organizing, storing, and managing data.
+A data structure is a specific way of organizing, storing, and managing data. or structuring the data in optimized way is called data structure.
 
 ## Algorithm
 
