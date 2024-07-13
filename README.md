@@ -71,6 +71,20 @@ function printPairs(arr) {
 
 - In this example, if the array has 5 elements, the function will perform 5 _ 5 = 25 operations. If the array has 10 elements, it will perform 10 _ 10 = 100 operations.
 
+```javascript
+function print(n) {
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      for (let k = 1; k <= n; k++) {
+        console.log(i, j, k);
+      }
+    }
+  }
+}
+```
+
+- In the above code the number of operations will be the number of times the loop will run so there are three nested loops. If n=3, then the total number of operations would be 3^3 = 27
+
 ### What is O(log n)?
 
 O(log n) describes an algorithm whose time complexity grows logarithmically with the size of the input (n). This means that the time it takes to complete the algorithm increases slowly as the input size grows. Logarithmic time complexity is highly efficient, especially for large input sizes.
@@ -152,6 +166,7 @@ console.log(checkStr("level")); //true if it's palindrome or else false if it's 
 const checkNum = (str) => str === str.split("").reverse().join("");
 console.log(checkNum("level")); //true if it's palindrome or else false if it's not palindrome
 ```
+
 ### Capitalize first letter of each word.
 
 ```javascript
@@ -167,6 +182,7 @@ const capitalize = (str) => {
 
 console.log(capitalize(string));
 ```
+
 **Problem -> Imagine you have a array of numbers and a target number. Your job is to find two numbers from that array and the sum of those two number must be equal to the target number. You also need to tell which index those two numbers are in the array.**
 **example - if the array of number is [2, 7, 11, 15] and the target number is 0, then the answer would be [0, 1] because 2 (at index 0) plus 7 (at index 1) equals to 9**
 
@@ -183,7 +199,9 @@ function twoSum(arr, targetNo) {
 }
 console.log(twoSum([2, 4, 6, 8, 10], 10));
 ```
-### Linked List: 
+
+### Linked List:
+
 A linked list is a linear data structure where each element, called a node, contains a value and a reference (or link) to the next node in the sequence.
 
 - singly Linked List: A singly linked list is a data structure consisting of a sequence of elements, each containing a data value and a reference (or pointer) to the next element in the sequence. It allows for efficient insertion and deletion of elements but only provides unidirectional traversal from the head (the first element) to the tail (the last element).
@@ -240,6 +258,7 @@ myLinkedList.push(3);
 myLinkedList.push(4);
 console.log(myLinkedList.reverse());
 ```
+
 - Doubly Linked List: A doubly linked list is a data structure consisting of a sequence of elements, each containing a data value and two references (or pointers): one pointing to the next element in the sequence and the other pointing to the previous element. This bidirectional linkage allows traversal in both forward and backward directions, facilitating more efficient insertions and deletions compared to a singly linked list, especially when the operations involve elements near the end of the list.
 
 ```javascript
@@ -339,9 +358,10 @@ console.log(myDoublyLinkedList);
 ```
 
 ## stack
+
 A stack is a linear data structure that follows LIFO (Last In First Out) principle.
 
-``` javascript
+```javascript
 class Node {
   constructor(value) {
     this.value = value;
@@ -397,6 +417,7 @@ console.log(theStack);
 ```
 
 ### Queue
+
 A Queue is a linear data structure that functions like a waiting line. It follows the FIFO (First In First Out) principle, meaning the element that enters the queue first will be the first one to be removed.
 
 ```javascript
